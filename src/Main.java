@@ -5,13 +5,15 @@ import java.lang.Thread;
 
 public class Main {
     public static void main(String[] args) throws IOException  {
-        BufferedReader reader;
+
 try {
+    BufferedReader reader;
     reader = new BufferedReader(new FileReader("/var/log/auth.log"));
     String line = reader.readLine();
     while (line != null) {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         System.out.println(line);
+        line = reader.readLine();
     }
     reader.close();
 }
