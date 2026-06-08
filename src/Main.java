@@ -9,16 +9,15 @@ public class Main {
 try {
     reader = new BufferedReader(new FileReader("/var/log/auth.log"));
     String line = reader.readLine();
-
     while (line != null) {
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         System.out.println(line);
-
     }
     reader.close();
-} catch (IOException | InterruptedException e) {
+}
+catch (IOException | InterruptedException e) {
     throw new RuntimeException(e);
 }
 
     }
-    }
+}
